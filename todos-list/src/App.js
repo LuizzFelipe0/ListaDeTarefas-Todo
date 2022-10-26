@@ -4,7 +4,6 @@ import {BsFillPlusCircleFill} from 'react-icons/bs';
 import {Todo} from './Todo';
 import { database } from './Firebase';
 import {query,collection, onSnapshot, updateDoc, doc, addDoc, deleteDoc} from 'firebase/firestore';
-import { async } from '@firebase/util';
 
 function App() {
 
@@ -54,12 +53,13 @@ const cancelTodo = async (id) => {
 }
 
   return (
-    <div className={style.backg}>
+
+    <div className={todos.length > 7 ? style.backg7 : style.backg}>
       <div className={style.container}>
         <h3 className={style.heading}>Lista de Tarefas</h3>
         <form onSubmit={generateTodo} className={style.form}>
           <input value={input} onChange={(e) => setInput(e.target.value)} className={style.input} type="text" placeholder='Adicione uma Tarefa'/>
-          <button className={style.button}><BsFillPlusCircleFill size={42}/></button>
+          <button className={style.button}><BsFillPlusCircleFill size={42} /></button>
         </form>
         <ul>
             {todos.map((todo, index) => (
