@@ -8,7 +8,7 @@ export const Todo = ({todo, completeAlternate , cancelTodo}) => {
    
     <li className={todo.completed ? styleli.completeList : styleli.list}>
         <div className={styleli.row}>
-            <input onChange={() => completeAlternate(todo)} type="checkbox" checked={todo.completed ? 'checked' : ''} />
+            <input className={styleli.checkbox} onChange={() => completeAlternate(todo)} type="checkbox" checked={todo.completed ? 'checked' : ''} />
             <p onClick={() => completeAlternate(todo)} className={todo.completed ? styleli.completeText : styleli.text}>{todo.text}</p>
         </div>
         <button onClick={() => cancelTodo(todo.id)}>{<TbTrashOff size={20}/>}</button>

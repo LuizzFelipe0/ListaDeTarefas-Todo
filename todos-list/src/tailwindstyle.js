@@ -8,7 +8,8 @@ heading: `text-4xl  font-bold text-center text-violet-600 p-4 my-3`,
 form: `flex justify-start`,
 input: `border border-black rounded-sm p-2 w-11/12 text-xl`,
 button: `border p-2 ml-2 bg-violet-600 rounded-lg text-slate-100`,
-count: `text-center p-2 ` ,
+count: `text-center p-2 font-bold` ,
+author: `text-center mt-4 p-4 `
 };
 
 export const styleli = {
@@ -18,6 +19,6 @@ row: `flex`,
 completeList: `font-bold flex justify-between bg-green-500 rounded-md p-4 my-4 capitalize`,
 text: `ml-2 cursor-pointer`,
 completeText: `font-bold ml-2 cursor-pointer line-through`,
-button: `cursor-pointer flex itens-center`
-
+button: `cursor-pointer flex itens-center`,
+checkbox: `w-4 `
 };

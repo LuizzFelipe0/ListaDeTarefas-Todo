@@ -67,7 +67,7 @@ const cancelTodo = async (id) => {
           ))}
         </ul>
         {todos.length < 1 ? null : <p className={style.count}>{`Você possui ${todos.length} tarefas`}</p>}
-        
+        <p className={style.author}>© 2022 Luiz's List of Todos </p>
       </div>
     </div>
   );
